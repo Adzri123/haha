@@ -1,0 +1,41 @@
+h1 {
+  font-family: Copperplate;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(12, 99, 45);
+  text-decoration: overline;
+  text-shadow: 2px 2px 4px #575151ee;
+}
+
+h2 {
+  font-family: Papyrus;
+  font-size: 25px;
+  display: flex;
+  color: rgb(22, 20, 21);
+}
+
+h3 {
+  font-family: Lucida Console;
+  font-size: 40px;
+  display: flex;
+  color: rgb(9, 141, 68);
+  justify-content: right;
+}
+
+h4 {
+  font-family: Lucida Console;
+  font-size: 40px;
+  display: flex;
+  color: rgb(0, 0, 0);
+  justify-content: left;
+}
+
+h5 {
+  font-family: Papyrus;
+  font-size: 25px;
+  display: flex;
+  color: rgb(22, 20, 21);
+  justify-content: center;
+}

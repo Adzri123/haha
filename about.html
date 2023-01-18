@@ -1,0 +1,159 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="Assest/css/font1.css" />
+    <link rel="stylesheet" href="Assest/css/style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <img
+        src="Assest/image/LOGO M.M TEAM.png"
+        style="float: left; width: 15%; height: 15%"
+      />
+      <h1 style="font-size: 3vw">MAT MOTOR TEAM</h1>
+    </div>
+
+    <div class="top">
+      <div class="navbar">
+        <a class="active" href="index.html">Home</a>
+        <div class="dropdown">
+          <button>Discovery Us</button>
+          <div class="dropdown-content">
+            <a href="about.html">About</a>
+            <a href="organization.html">Organization</a>
+            <a href="history.html">History</a>
+            <a href="achievement.html">Achievement</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button>Product</button>
+          <div class="dropdown-content">
+            <a href="motorcycles.html">Motocyles</a>
+            <a href="accessories.html">Accessories</a>
+          </div>
+        </div>
+        <a href="contact.html">Contact</a>
+        <div class="feedback">
+          <a href="feedback.html"
+            ><img
+              src="Assest/image/feedback1.png"
+              style="width: 45px; height: 38px"
+          /></a>
+        </div>
+      </div>
+    </div>
+
+    <br><br>
+    
+    <img src="Assest/image/Motor.png" width="50%" align="right" hspace="15pt" />
+
+    <br>
+
+    <h1 style=" font-family: Copperplate;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(12, 99, 45);
+    text-decoration: overline;
+    text-shadow: 2px 2px 4px #575151ee;">ABOUT</h1>
+
+    <h2 style="  font-family: Papyrus;
+    font-size: 25px;
+    display: flex;
+    color: rgb(22, 20, 21);">
+      <ul class="a">
+      <li> MAT MOTOR is not just an ordinary motorcycle shop. We distribute and sell
+      motorcycles. Apart from that, we also prioritize quality service and spare
+      parts.</h2>
+    </ul></li>
+
+  <h1 style=" font-family: Copperplate;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(12, 99, 45);
+  text-decoration: overline;
+  text-shadow: 2px 2px 4px #575151ee;">VISION</h1>
+
+  <h2 style="  font-family: Papyrus;
+  font-size: 25px;
+  display: flex;
+  color: rgb(22, 20, 21);">
+    <ul class="a">
+    <li>
+      Aim to be the choice vendor of yours in owning your dream bike</h2>
+    </ul></li>
+
+    <h1 style=" font-family: Copperplate;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(12, 99, 45);
+    text-decoration: overline;
+    text-shadow: 2px 2px 4px #575151ee;">MISSION</h1>
+    
+     <h2 style="  font-family: Papyrus;
+     font-size: 25px;
+     display: flex;
+     color: rgb(22, 20, 21);">
+    <ul class="a">
+    <li>
+   To deliver the exceptional support and services to the customers</h2>
+  </ul></li>
+
+
+
+  <div class="footer">
+    <div class="container-footer">
+      <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
+    </div>
+    <div class="container-footer">
+      <h2>Address</h2>
+      <p style="font-size: 1.3vw">
+        Kajang Utama,Bandar Teknologi Kajang, Semenyih,Kajang 1.5 Storey Link
+        Factory @ kajang utama, Selangor
+      </p>
+    </div>
+    <div class="container-footer">
+      <p style="font-size: 1.3vw; padding-top: 130px">
+        ©Copyright by Mat Motor Team
+      </p>
+    </div>
+  </div>
+
+
+    <script>
+      function showTime() {
+        var date = new Date();
+        var h = date.getHours(); // 0 - 23
+        var m = date.getMinutes(); // 0 - 59
+        var s = date.getSeconds(); // 0 - 59
+        var session = "AM";
+
+        if (h == 0) {
+          h = 12;
+        }
+
+        if (h > 12) {
+          h = h - 12;
+          session = "PM";
+        }
+
+        h = h < 10 ? "0" + h : h;
+        m = m < 10 ? "0" + m : m;
+        s = s < 10 ? "0" + s : s;
+
+        var time = h + ":" + m + ":" + s + " " + session;
+        document.getElementById("MyClockDisplay").innerText = time;
+        document.getElementById("MyClockDisplay").textContent = time;
+
+        setTimeout(showTime, 1000);
+      }
+
+      showTime();
+    </script>
+</body>
+</html>

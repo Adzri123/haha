@@ -1,0 +1,176 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="Assest/css/font1.css" />
+    <link rel="stylesheet" href="Assest/css/style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <img
+        src="Assest/image/LOGO M.M TEAM.png"
+        style="float: left; width: 15%; height: 15%"
+      />
+      <h1 style="font-size: 3vw">MAT MOTOR TEAM</h1>
+    </div>
+
+    <div class="top">
+      <div class="navbar">
+        <a class="active" href="index.html">Home</a>
+        <div class="dropdown">
+          <button>Discovery Us</button>
+          <div class="dropdown-content">
+            <a href="about.html">About</a>
+            <a href="organization.html">Organization</a>
+            <a href="history.html">History</a>
+            <a href="achievement.html">Achievement</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button>Product</button>
+          <div class="dropdown-content">
+            <a href="motorcycles.html">Motocyles</a>
+            <a href="accessories.html">Accessories</a>
+          </div>
+        </div>
+        <a href="contact.html">Contact</a>
+        <div class="feedback">
+          <a href="feedback.html"
+            ><img
+              src="Assest/image/feedback1.png"
+              style="width: 45px; height: 38px"
+          /></a>
+        </div>
+      </div>
+    </div>
+
+    <br /><br /><br />
+
+    <h1
+      style="
+        font-family: Copperplate;
+        font-size: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgb(12, 99, 45);
+        text-decoration: overline;
+        text-shadow: 2px 2px 4px #575151ee;
+      "
+    >
+      CONTACT US
+    </h1>
+
+    <br /><br /><br /><br />
+
+    <div class="row2">
+      <div class="column5">
+        <div class="card2">
+          <img src="Assest/image/map.png" width="125px" />
+          <h3>ADDRESS</h3>
+          <p>
+            Kajang Utama,Bandar Teknologi Kajang, Semenyih,Kajang 1.5 Storey
+            Link Factory @ kajang utama, Selangor
+          </p>
+        </div>
+      </div>
+
+      <div class="column5">
+        <div class="card2">
+          <img src="Assest/image/call.png" width="100px" />
+          <h3>PHONE</h3>
+          <p><b>Call</b><br />04-7300 2720</p>
+          <p><b>Whatsapp</b><br />011-7299 2718</p>
+        </div>
+      </div>
+
+      <div class="column5">
+        <div class="card2">
+          <img src="Assest/image/email.png" width="125px" />
+          <h3>EMAIL</h3>
+          <p>Email us for more information</p>
+          <p>
+            <a href="https://mail.google.com/mail/u/0/" target="_blank"
+              ><font color="blue">matmotorteam@gmail.com</font></a
+            >
+          </p>
+        </div>
+      </div>
+
+      <div class="column5">
+        <div class="card2">
+          <img src="Assest/image/social.png" width="150px" />
+          <h3>SOCIAL MEDIA</h3>
+          <p><b>Facebook</b></p>
+          <p>
+            <a
+              href="https://www.facebook.com/profile.php?id=100089506840503"
+              target="_blank"
+              ><font color="blue">MAT MOTOR Team</font></a
+            >
+          </p>
+          <p><b>Tiktok</b></p>
+          <p>
+            <a
+              href="https://www.tiktok.com/@matmotorteam?_t=8Z3SLWEdXlq&_r=1"
+              target="_blank"
+              ><font color="blue">@matmotorteam</font></a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+    <br /><br /><br /><br /><br />
+    <audio controls>
+      <source src="assest/audio/soundtrax.mp3" type="audio/mp3" />
+    </audio>
+
+    <div class="footer">
+      <div class="container-footer">
+        <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
+      </div>
+      <div class="container-footer">
+        <h2>Address</h2>
+        <p style="font-size: 1.3vw">
+          Kajang Utama,Bandar Teknologi Kajang, Semenyih,Kajang 1.5 Storey Link
+          Factory @ kajang utama, Selangor
+        </p>
+      </div>
+      <div class="container-footer">
+        <p style="font-size: 1.3vw; padding-top: 130px">
+          ©Copyright by Mat Motor Team
+        </p>
+      </div>
+    </div>
+
+    <script>
+      function showTime() {
+        var date = new Date();
+        var h = date.getHours(); // 0 - 23
+        var m = date.getMinutes(); // 0 - 59
+        var s = date.getSeconds(); // 0 - 59
+        var session = "AM";
+
+        if (h == 0) {
+          h = 12;
+        }
+
+        if (h > 12) {
+          h = h - 12;
+          session = "PM";
+        }
+
+        h = h < 10 ? "0" + h : h;
+        m = m < 10 ? "0" + m : m;
+        s = s < 10 ? "0" + s : s;
+
+        var time = h + ":" + m + ":" + s + " " + session;
+        document.getElementById("MyClockDisplay").innerText = time;
+        document.getElementById("MyClockDisplay").textContent = time;
+
+        setTimeout(showTime, 1000);
+      }
+
+      showTime();
+    </script>
+  </body>
+</html>

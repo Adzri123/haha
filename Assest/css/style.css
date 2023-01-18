@@ -1,0 +1,669 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ddd;
+}
+
+/*Header*/
+
+.header {
+  background-color: #006400;
+  padding: 10px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+
+/*Sticky Navbar*/
+
+.top {
+  height: 1px;
+  background: black;
+  top: 0;
+  z-index: 2;
+  position: sticky;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #051a05;
+  box-shadow: 0 2px 5px rgba(112, 115, 112, 0.421);
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background-color: #808080;
+  color: black;
+}
+
+.navbar a.active {
+  background-color: #5cff5c;
+  color: white;
+}
+
+/*Dropdown button*/
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown button {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 14px;
+  min-width: 160px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown button:hover {
+  background-color: #808080;
+  color: black;
+}
+
+.dropdown button.active {
+  background-color: #5cff5c;
+  color: white;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/*Feedback hover*/
+.feedback {
+  float: right;
+}
+
+.feedback a {
+  float: none;
+  padding: 5px 10px;
+  text-decoration: none;
+  display: block;
+}
+.feedback img:hover {
+  background-color: #808080;
+}
+
+/*Footer*/
+
+.footer {
+  position: relative;
+  float: left;
+  bottom: 0;
+  width: 100%;
+  height: 300px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #006400;
+  color: white;
+  text-align: center;
+}
+
+.container-footer {
+  padding: 10px;
+  max-height: 300px;
+  width: 30%;
+  float: left;
+  position: relative;
+}
+
+/*Clock Footer*/
+.clock {
+  position: static;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background-color: #051a05;
+  color: #ffffff;
+  font-size: 25px;
+  font-family: Orbitron;
+  letter-spacing: 10px;
+}
+
+/*Grab Slider*/
+.container-box {
+  max-width: 80%;
+  margin: auto;
+  margin-bottom: 30px;
+  overflow: hidden;
+  border: groove 20px;
+}
+
+.product-container {
+  display: flex;
+  margin-left: 2%;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -ms-overflow-style: none;
+}
+.product-container::-webkit-scrollbar {
+  display: none;
+}
+.product-container.active {
+  cursor: grabbing;
+  cursor: -webkit-grabbing;
+  scroll-snap-type: unset;
+}
+.product-card {
+  display: flex;
+  min-width: 320px;
+  max-height: 500px;
+  max-width: 320px;
+  margin-right: 18px;
+  scroll-snap-align: start;
+}
+.product-card img {
+  width: 100%;
+  object-fit: cover;
+}
+
+/* checkbox hide */
+#volume-switcher {
+  display: none;
+}
+
+/* volume on : container */
+#switcher-container {
+  display: block;
+  position: relative;
+  width: 80%;
+  height: auto;
+  margin-left: 10%;
+  cursor: pointer;
+  opacity: 0.8;
+  filter: invert(1); /* changer couleur icon */
+  background-color: rgba(255, 255, 255, 0.4);
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in 0s;
+}
+
+/* volume on : button */
+#switcher-container:after {
+  content: "";
+  border: 0px solid black;
+  background: url(https://res.cloudinary.com/quentindigital/image/upload/v1598656567/icons/sound-off_rhwz0o.svg)
+    center center;
+  background-size: 100%;
+  bottom: 10px;
+  right: 10px;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+}
+
+#switcher-container:hover {
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0);
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in 0s;
+}
+
+/* volume off : container */
+#volume-switcher:checked + #switcher-container {
+  background-color: rgba(255, 255, 255, 0);
+  opacity: 0.1;
+  -webkit-transition: all 0.7s ease-in 1s;
+  -moz-transition: all 0.7s ease-in 1s;
+  transition: all 0.7s ease-out 1s;
+}
+
+/* volume off : hover */
+#volume-switcher:checked + #switcher-container:hover {
+  opacity: 0.8;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  transition: opacity 0.3s ease-out 0s;
+}
+
+/* volume off : button */
+#volume-switcher:checked + #switcher-container:after {
+  right: 10px;
+  content: "";
+  background: url(https://res.cloudinary.com/quentindigital/image/upload/v1598656567/icons/sound-on_vztd3h.svg)
+    center center;
+  background-size: 100%;
+}
+/*Products*/
+
+/* table */
+table,
+th,
+td {
+  border: 2px solid rgb(182, 178, 178);
+}
+
+.row > .column {
+  padding: 0 8px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Create four equal columns that floats next to eachother */
+.column {
+  float: left;
+  width: 50%;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 3;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  margin-bottom: 5%;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Hide the slides by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Caption text */
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+img.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/*Discovery Us*/
+ul.a {
+  list-style-type: circle;
+}
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #4caf50;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
+.newspaper {
+  column-count: 3;
+  column-gap: 40px;
+  column-rule-style: solid;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  background-color: 5F8D4E;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.container::after {
+  content: "";
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  right: -18px;
+  background-color: A4BE7B;
+  border: 4px solid rgb(18, 92, 46);
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  left: 0;
+  margin-left: -78;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent 285430;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent 285430 transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 30px;
+  background-color: E5D9B6;
+  position: relative;
+  border-radius: 6px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+  /* Place the timelime to the left */
+  .timeline::after {
+    left: 31px;
+  }
+
+  /* Full-width containers */
+  .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+  /* Make sure that all arrows are pointing leftwards */
+  .container::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent rgb(207, 39, 39) transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .left::after,
+  .right::after {
+    left: 15px;
+  }
+
+  /* Make all right containers behave like the left ones */
+  .right {
+    left: 0%;
+  }
+}
+
+.column1 {
+  float: left;
+  width: 23%;
+  margin-bottom: 16px;
+  padding: 1%;
+}
+
+.column2 {
+  float: center;
+  width: 23%;
+  margin-bottom: 16px;
+  margin-left: 40%;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container::after,
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+/*Feedback*/
+/* Create three equal columns that floats next to each other */
+.column3 {
+  float: left;
+  width: 20%;
+  padding: 5%;
+  height: 170%;
+  /* Should be removed. Only for demonstration */
+}
+
+.column4 {
+  float: left;
+  width: 60%;
+  padding: 5%;
+  height: 170%; /* Should be removed. Only for demonstration */
+}
+
+/*Contact*/
+/* Float four columns side by side */
+.column5 {
+  float: left;
+  width: 22%;
+  padding: 1.5%;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row2 {
+  width: 100%;
+}
+
+/* Clear floats after the columns */
+.row2:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the counter cards */
+.card2 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 0.5%;
+  min-height: 350px;
+  text-align: center;
+  background-color: #3a9b629a;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 800px) {
+  .column5 {
+    width: 97%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
